@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niam's Lawn Care - Affordable Yard Services</title>
+    
+</head>
+<body>
+    <header>
+        <h1>NIAM'S LAWN CARE</h1>
+        <p class="tagline">Affordable yard services from your local hardworking student</p>
+    </header>
+    
+    <div class="about-me">
+        <img src="https://img.freepik.com/premium-photo/thumbs-up-plain-sticker-with-white-background_1059430-15769.jpg?w=2000" alt="Niam">
+        <h3>Hi, I'm Niam!</h3>
+        <p>I'm a student offering quality lawn services at great prices to save up for college. I take pride in my work and treat every yard like it's my own.</p>
+        <a href="tel:425-465-6990" class="cta-button">Call Me Now</a>
+    </div>
+    
+    <main class="container">
+        <section id="services">
+            <div class="section-title">
+                <h2>My Services & Prices</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" onclick="toggleService(this)">
+                    <div class="service-img" style="background-image: url('https://kansasturfmasters.com/wp-content/uploads/2020/03/mowing-lawn.jpg');"></div>
+                    <div class="service-content">
+                        <h3>Lawn Mowing</h3>
+                        <div class="price">$5-15 per mow (depending on size)</div>
+                        <p>Weekly, bi-weekly, or one-time mowing.</p>
+                        
+                        <div class="service-details">
+                            <p><strong>Service includes:</strong> Mowing backyard or front-yard. Grass clippings bagged upon request.</p>
+                            
+                            <div class="order-form">
+                                <h4>Book This Service</h4>
+                                <form onsubmit="return confirmBooking(event, 'mowing')" action="https://formsubmit.co/niamnangalia1234@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="NEW LAWN MOWING ORDER">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_autoresponse" value="Thanks for booking with Niam's Lawn Care! I'll contact you within 24 hours to confirm your lawn mowing appointment. For urgent questions, text me at 425-465-6990.">
+
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+    </div>
+    <div class="form-group">
+    <label>Email (for confirmation)</label>
+    <input type="email" name="email" required>
+</div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="address" required>
+    </div>
+     <div class="form-group">
+        <label>Lawn Size</label>
+        <select name="size" required onchange="calculateTotal()">
+            <option value="">Select size</option>
+            <option value="Small (Under 500 sq ft)">Small ($5)</option>
+            <option value="Medium (500-1000 sq ft)">Medium ($10)</option>
+            <option value="Large (Over 1000 sq ft)">Large ($15)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Preferred Date</label>
+        <input type="date" name="date" required>
+    </div>
+    <div class="form-group">
+        <label>Preferred Time</label>
+        <select name="time" required>
+            <option value="">Select time</option>
+            <option value="4:00-5:00 PM">4:00-5:00 PM (Weekdays)</option>
+            <option value="5:00-6:00 PM">5:00-6:00 PM (Weekdays)</option>
+            <option value="9:00-10:00 AM">9:00-10:00 AM (Saturday)</option>
+            <option value="10:00-11:00 AM">10:00-11:00 AM (Saturday)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Special Instructions</label>
+        <textarea name="notes" rows="3"></textarea>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+    <button type="submit" class="submit-btn">Book Mowing Service</button>
+    <strong>Total: $<span id="mowing-total">5</span></strong>
+</div>
+</form>
+                                <div class="order-confirmation" id="mowing-confirmation">
+                                    Thank you! Your lawn mowing request has been submitted. Niam will contact you shortly to confirm.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card" onclick="toggleService(this)">
+                    <div class="service-img" style="background-image: url('https://revogarden.com/wp-content/uploads/2022/05/green-wheelbarrow-holding-plants.jpg');"></div>
+                    <div class="service-content">
+                        <h3>Yard Cleanup</h3>
+                        <div class="price">$10-20 per job</div>
+                        <p>Leaf removal, branch pickup, and general yard waste cleanup. Perfect for spring or fall.</p>
+                        
+                        <div class="service-details">
+                            <p><strong>Service includes:</strong> Collection and removal of leaves, branches, and yard debris. Hauling away of collected materials.</p>
+                            
+                            <div class="order-form">
+                                <h4>Book This Service</h4>
+                                <form onsubmit="return confirmBooking(event, 'cleanup')" action="https://formsubmit.co/niamnangalia1234@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="NEW YARD CLEANUP ORDER">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_autoresponse" value="Thanks for booking with Niam's Lawn Care! I'll contact you within 24 hours to confirm your yard cleanup appointment. For urgent questions, text me at 425-465-6990.">
+
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+    </div>
+    <div class="form-group">
+    <label>Email (for confirmation)</label>
+    <input type="email" name="email" required>
+</div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="address" required>
+    </div>
+    <div class="form-group">
+        <label>Yard Size</label>
+        <select name="size" required onchange="calculateTotal()">
+            <option value="">Select size</option>
+            <option value="Small (Under 500 sq ft)">Small ($10)</option>
+            <option value="Medium (500-1000 sq ft)">Medium ($15)</option>
+            <option value="Large (Over 1000 sq ft)">Large ($20)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Preferred Date</label>
+        <input type="date" name="date" required>
+    </div>
+    <div class="form-group">
+        <label>Special Instructions</label>
+        <textarea name="notes" rows="3"></textarea>
+    </div>
+  <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+    <button type="submit" class="submit-btn">Book Cleanup Service</button>
+    <strong>Total: $<span id="cleanup-total">10</span></strong>
+</div>
+</form>
+                                <div class="order-confirmation" id="cleanup-confirmation">
+                                    Thank you! Your yard cleanup request has been submitted. Niam will contact you shortly to confirm.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card" onclick="toggleService(this)">
+                    <div class="service-img" style="background-image: url('https://theweedpullingpros.com/photo/theweedpullingproscom/weed-pulling.jpg');"></div>
+                    <div class="service-content">
+                        <h3>Weed Pulling</h3>
+                        <div class="price">$5-10 per hour</div>
+                        <p>Manual weed removal from garden beds, walkways, and between pavers.</p>
+                        
+                        <div class="service-details">
+                            <p><strong>Service includes:</strong> Hand-pulling of weeds from specified areas. Does not include chemical treatments.</p>
+                            
+                            <div class="order-form">
+                                <h4>Book This Service</h4>
+                                <form onsubmit="return confirmBooking(event, 'weeds')" action="https://formsubmit.co/niamnangalia1234@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="NEW WEED PULLING ORDER">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_autoresponse" value="Thanks for booking with Niam's Lawn Care! I'll contact you within 24 hours to confirm your weed pulling appointment. For urgent questions, text me at 425-465-6990.">
+
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+    </div>
+    <div class="form-group">
+    <label>Email (for confirmation)</label>
+    <input type="email" name="email" required>
+</div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="address" required>
+    </div>
+    <div class="form-group">
+        <label>Estimated Hours Needed</label>
+        <select name="hours" required onchange="calculateTotal()">
+            <option value="">Select hours</option>
+            <option value="1 hour ($30)">1 hour ($5)</option>
+            <option value="2 hours ($60)">2 hours ($10)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Preferred Date</label>
+        <input type="date" name="date" required>
+    </div>
+    <div class="form-group">
+        <label>Special Instructions</label>
+        <textarea name="notes" rows="3"></textarea>
+    </div>
+   <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+    <button type="submit" class="submit-btn">Book Weed Service</button>
+    <strong>Total: $<span id="weeds-total">5</span></strong>
+</div>
+</form>
+                                <div class="order-confirmation" id="weeds-confirmation">
+                                    Thank you! Your weed pulling request has been submitted. Niam will contact you shortly to confirm.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="special-offer">
+                <h3>FIRST TIME CUSTOMER SPECIAL!</h3>
+                <p>FIRST LAWN MOW ONLY $5! (regular sized yards)</p>
+                <small>Just text "FIRST MOW" to 425-465-6990 to claim</small>
+            </div>
+            
+            <div class="testimonials">
+                <h3>What My Customers Say:</h3>
+                <div class="testimonial">
+                    <p>"Niam did a fantastic job mowing our lawn all summer. Very reliable and always showed up on time!"</p>
+                    <div class="testimonial-author">- Mrs. Johnson, Maple Street</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Best $5 I ever spent! My yard looked great and now I hire Niam every two weeks."</p>
+                    <div class="testimonial-author">- Mr. Davis, Oak Avenue</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            
+            <div class="contact-info">
+                <p>Text or call - I usually respond within a few hours!</p>
+                <a href="tel:425-465-6990" class="phone-number">425-465-6990</a>
+                <p>Serving the local neighborhood after school and on weekends</p>
+                <p><strong>Available:</strong> Mon-Fri 4pm-7pm | Sat 9am-5pm</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Niam's Lawn Care - A student-run business</p>
+        <p><small>Fully insured</small></p>
+    </footer>
+
+    <script>
+        // Toggle service details when clicking on a service card
+       function toggleService(card) {
+    // Close all other service cards
+    document.querySelectorAll('.service-card').forEach(item => {
+        if (item !== card && !card.contains(event.target)) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle the clicked card only if click wasn't inside an input
+    if (!event.target.closest('input, select, textarea, button')) {
+        card.classList.toggle('active');
+    }
+}
+        
+        // Submit order form
+        function submitOrder(event, serviceType) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formId = form.id;
+            const confirmationId = formId.replace('-form', '-confirmation');
+            
+            // Get form data
+            const formData = new FormData(form);
+            const orderDetails = {};
+            formData.forEach((value, key) => {
+                orderDetails[key] = value;
+            });
+            
+            // Add service type and timestamp
+            orderDetails.serviceType = serviceType;
+            orderDetails.timestamp = new Date().toISOString();
+            
+            // In a real implementation, you would send this data to a server
+            // For now, we'll store it in localStorage and log it
+            saveOrder(orderDetails);
+            
+            // Show confirmation message
+            document.getElementById(confirmationId).style.display = 'block';
+            
+            // Reset form
+            form.reset();
+            
+            // Scroll to confirmation
+            document.getElementById(confirmationId).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Save order to localStorage (simplified version - in real life you'd use a server)
+        function saveOrder(order) {
+            // Get existing orders or initialize empty array
+            const orders = JSON.parse(localStorage.getItem('niamsLawnCareOrders')) || [];
+            
+            // Add new order
+            orders.push(order);
+            
+            // Save back to localStorage
+            localStorage.setItem('niamsLawnCareOrders', JSON.stringify(orders));
+            
+            // Log to console (for demo purposes)
+            console.log('New order received:', order);
+            console.log('All orders:', orders);
+            
+            // In a real implementation, you would send this to your email or a database
+            // This is just a placeholder to show the concept
+            sendOrderNotification(order);
+        }
+        
+        // Simulate sending a notification (in a real app, this would email you or use a service like Twilio)
+        function sendOrderNotification(order) {
+            const message = `New Lawn Care Order:
+Service: ${order.serviceType}
+Name: ${order['weeds-name'] || order['cleanup-name'] || order['mowing-name']}
+Phone: ${order['weeds-phone'] || order['cleanup-phone'] || order['mowing-phone']}
+Address: ${order['weeds-address'] || order['cleanup-address'] || order['mowing-address']}
+Date: ${order['weeds-date'] || order['cleanup-date'] || order['mowing-date']}
+Time: ${order['weeds-time'] || order['cleanup-time'] || order['mowing-time']}
+            
+Details: ${JSON.stringify(order, null, 2)}`;
+            
+            console.log('Notification would be sent with this content:\n', message);
+            alert("New order notification would be sent here. Check console for details.");
+        }
+        
+        // Set minimum date to today on date inputs
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.min = today;
+            });
+        });
+        // Calculate and display totals when options change
+function calculateTotal() {
+    // Lawn Mowing
+    const mowingSize = document.querySelector('[name="size"]')?.value;
+    if (mowingSize) {
+        const mowingPrice = mowingSize.includes('Small') ? 5 : 
+                          mowingSize.includes('Medium') ? 10 : 15;
+        document.getElementById('mowing-total').textContent = mowingPrice;
+    }
+
+    // Yard Cleanup
+    const cleanupSize = document.querySelectorAll('[name="size"]')[1]?.value;
+    if (cleanupSize) {
+        const cleanupPrice = cleanupSize.includes('Small') ? 10 : 
+                           cleanupSize.includes('Medium') ? 15 : 20;
+        document.getElementById('cleanup-total').textContent = cleanupPrice;
+    }
+
+    // Weed Pulling
+    const weedHours = document.querySelector('[name="hours"]')?.value;
+    if (weedHours) {
+        const weedPrice = weedHours.includes('1 hour') ? 5 : 10;
+        document.getElementById('weeds-total').textContent = weedPrice;
+    }
+}
+
+// Add event listeners to all selects
+document.querySelectorAll('select').forEach(select => {
+    select.addEventListener('change', calculateTotal);
+});
+
+// Payment confirmation popup
+function confirmBooking(event, serviceName) {
+    const totalElement = document.getElementById(`${serviceName}-total`);
+    if (!confirm(`CASH PAYMENT: The ${serviceName} service total will be $${totalElement.textContent}. Payment is due when service is completed. Click OK to confirm your booking.`)) {
+        event.preventDefault(); // Cancel form submission if user clicks "Cancel"
+    }
+}
+
+// Initialize totals on page load
+document.addEventListener('DOMContentLoaded', calculateTotal);
+    </script>
+</body>
+</html>
